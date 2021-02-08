@@ -98,6 +98,13 @@ let NooberPoolButton = document.querySelector('#noober-pool-filter')
     console.log("Noober Pool Selected")
     let response= await fetch(url)
     let json = await response.json()
+    let newArray[]
+    for (let i=0; i<json.length; i++{
+      let b = levelOfService(json[i])
+      if(b=="Noober Pool"){
+        newArray.push(json[i])
+      }
+    })
 
 
 
