@@ -95,6 +95,7 @@ window.addEventListener('DOMContentLoaded', function() {
 let NooberPurpleButton = document.querySelector('#noober-purple-filter')
   NooberPurpleButton.addEventListener('click', async function(event){
     event.preventDefault()
+    NooberPurpleButton.insertAdjacentHTML('beforeend', `<h1>Noober Purple Selected</h1>`)
     console.log("Noober Purple Selected")
     let response= await fetch(url)
     let json = await response.json()
@@ -108,12 +109,12 @@ let NooberPurpleButton = document.querySelector('#noober-purple-filter')
     let ridesDiv = document.querySelector('.rides')
     let html = renderRides(purpleArray)
     ridesDiv.insertAdjacentHTML('beforeend', `${html}`)
+
       }
     })
 
 
 
-    NooberPurpleButton.insertAdjacentHTML('beforeend', `<h1>Noober Purple Selected</h1>`)
 
 
 //  let RideType = 'Noober Purple'
