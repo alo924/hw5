@@ -69,5 +69,36 @@ function renderRides(ridesArray) {
 
 window.addEventListener('DOMContentLoaded', function() {
   // YOUR CODE
+
+//let AllRides
+
+//Noober Pool
+
+
+let url = 'https://kiei451.com/api/rides.json' 
+let NooberPoolButton = document.querySelector('#noober-pool-filter')
+  NooberPoolButton.addEventListener('click' async function(event){
+    event.preventDefault()
+    NooberPoolButton.insertAdjacentHTML('beforeend', `<h1>Noober Pool Selected</h1>`)
+    let response= await fetch(url)
+    let json = await response.json()
+    NooberPoolButton.insertAdjacentElement('beforeend', renderRides(ridesArray))
+//  let RideType = 'Noober Pool'
+//  let filterButton = document.querySelector('.filter-button')
+//  filterButton.innerHTML = `${RideType} Type`
+
+
+  })
+
+
+
+
+
+
+
+
+
+
+
 })
 
