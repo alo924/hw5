@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   let response = await fetch (url)
   let json = await response.json()
-  AllRidesButton.insertAdjacentElement('beforeend', renderRides(ridesArray))
+ // AllRidesButton.insertAdjacentElement('beforeend', renderRides(ridesArray))
 
 
 
@@ -98,7 +98,7 @@ let NooberPoolButton = document.querySelector('#noober-pool-filter')
     NooberPoolButton.insertAdjacentHTML('beforeend', `<h1>Noober Pool Selected</h1>`)
     let response= await fetch(url)
     let json = await response.json()
-    NooberPoolButton.insertAdjacentElement('beforeend', renderRides(ridesArray))
+   // NooberPoolButton.insertAdjacentElement('beforeend', renderRides(ridesArray))
 
 
 
