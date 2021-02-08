@@ -115,13 +115,6 @@ let NooberPurpleButton = document.querySelector('#noober-purple-filter')
 
 
 
-
-
-//  let RideType = 'Noober Purple'
-//  let filterButton = document.querySelector('.filter-button')
-//  filterButton.innerHTML = `${RideType} Type`
-
-
   })
 
 
