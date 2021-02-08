@@ -74,13 +74,13 @@ window.addEventListener('DOMContentLoaded', function() {
 
 //let AllRides
 
-  let AllRidesButton = document.querySelector('#all-filter')
-  AllRidesButton.addEventListener('click', async function(event){
-  event.preventDefault()
-  AllRidesButton.insertAdjacentHTML('beforeend', `<h1>All Rides Selected</h1>`)
+ // let AllRidesButton = document.querySelector('#all-filter')
+ // AllRidesButton.addEventListener('click', async function(event){
+ // event.preventDefault()
+ // AllRidesButton.insertAdjacentHTML('beforeend', `<h1>All Rides Selected</h1>`)
 
-  let response = await fetch (url)
-  let json = await response.json()
+ // let response = await fetch (url)
+ // let json = await response.json()
  // AllRidesButton.insertAdjacentElement('beforeend', renderRides(ridesArray))
 
 
@@ -95,13 +95,13 @@ window.addEventListener('DOMContentLoaded', function() {
 let NooberPoolButton = document.querySelector('#noober-pool-filter')
   NooberPoolButton.addEventListener('click', async function(event){
     event.preventDefault()
-    NooberPoolButton.insertAdjacentHTML('beforeend', `<h1>Noober Pool Selected</h1>`)
+    console.log("Noober Pool Selected")
     let response= await fetch(url)
     let json = await response.json()
-   // NooberPoolButton.insertAdjacentElement('beforeend', renderRides(ridesArray))
 
 
 
+//     NooberPoolButton.insertAdjacentHTML('beforeend', `<h1>Noober Pool Selected</h1>`)
 
 
 //  let RideType = 'Noober Pool'
