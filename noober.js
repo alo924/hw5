@@ -88,30 +88,35 @@ window.addEventListener('DOMContentLoaded', function() {
   })
 
 
-//Noober Pool
+//Noober Purple
 
 
 
-let NooberPoolButton = document.querySelector('#noober-pool-filter')
-  NooberPoolButton.addEventListener('click', async function(event){
+let NooberPurpleButton = document.querySelector('#noober-purple-filter')
+  NooberPurpleButton.addEventListener('click', async function(event){
     event.preventDefault()
-    console.log("Noober Pool Selected")
+    console.log("Noober Purple Selected")
     let response= await fetch(url)
     let json = await response.json()
-    let newArray[]
+    
+    let purpleArray = []
     for (let i=0; i<json.length; i++{
       let b = levelOfService(json[i])
-      if(b=="Noober Pool"){
-        newArray.push(json[i])
+      if(b=="Noober Purple"){
+        purpleArray.push(json[i])
+    
+    let ridesDiv = document.querySelector('.rides')
+    let html = renderRides(purpleArray)
+    ridesDiv.insertAdjacentHTML('beforeend', `${html}`)
       }
     })
 
 
 
-//     NooberPoolButton.insertAdjacentHTML('beforeend', `<h1>Noober Pool Selected</h1>`)
+//     NooberPurpleButton.insertAdjacentHTML('beforeend', `<h1>Noober Purple Selected</h1>`)
 
 
-//  let RideType = 'Noober Pool'
+//  let RideType = 'Noober Purple'
 //  let filterButton = document.querySelector('.filter-button')
 //  filterButton.innerHTML = `${RideType} Type`
 
