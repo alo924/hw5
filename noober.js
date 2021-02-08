@@ -90,8 +90,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
 //Noober Purple
 
-
-
 let NooberPurpleButton = document.querySelector('#noober-purple-filter')
   NooberPurpleButton.addEventListener('click', async function(event){
     event.preventDefault()
@@ -101,6 +99,7 @@ let NooberPurpleButton = document.querySelector('#noober-purple-filter')
     let url = 'https://kiei451.com/api/rides.json' 
     let response= await fetch(url)
     let json = await response.json()
+    console.log(json)
     
     let purpleArray = []
     for (let i=0; i<json.length; i++){
