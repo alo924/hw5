@@ -113,7 +113,7 @@ let NooberPurpleButton = document.querySelector('#noober-purple-filter')
 
 
 
-//     NooberPurpleButton.insertAdjacentHTML('beforeend', `<h1>Noober Purple Selected</h1>`)
+    NooberPurpleButton.insertAdjacentHTML('beforeend', `<h1>Noober Purple Selected</h1>`)
 
 
 //  let RideType = 'Noober Purple'
