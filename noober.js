@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 let url = 'https://kiei451.com/api/rides.json' 
 let NooberPoolButton = document.querySelector('#noober-pool-filter')
-  NooberPoolButton.addEventListener('click' async function(event){
+  NooberPoolButton.addEventListener('click', async function(event){
     event.preventDefault()
     NooberPoolButton.insertAdjacentHTML('beforeend', `<h1>Noober Pool Selected</h1>`)
     let response= await fetch(url)
