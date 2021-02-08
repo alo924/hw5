@@ -70,7 +70,7 @@ function renderRides(ridesArray) {
 window.addEventListener('DOMContentLoaded', function() {
   // YOUR CODE
 
-  let url = 'https://kiei451.com/api/rides.json' 
+  
 
 //let AllRides
 
@@ -97,21 +97,24 @@ let NooberPurpleButton = document.querySelector('#noober-purple-filter')
     event.preventDefault()
     NooberPurpleButton.insertAdjacentHTML('beforeend', `<h1>Noober Purple Selected</h1>`)
     console.log("Noober Purple Selected")
+
+    let url = 'https://kiei451.com/api/rides.json' 
     let response= await fetch(url)
     let json = await response.json()
     
     let purpleArray = []
-    for (let i=0; i<json.length; i++{
+    for (let i=0; i<json.length; i++){
       let b = levelOfService(json[i])
       if(b=="Noober Purple"){
         purpleArray.push(json[i])
     
-    let ridesDiv = document.querySelector('.rides')
-    let html = renderRides(purpleArray)
-    ridesDiv.insertAdjacentHTML('beforeend', `${html}`)
+  //  let ridesDiv = document.querySelector('.rides')
+  //  let html = renderRides(purpleArray)
+  //  ridesDiv.insertAdjacentHTML('beforeend', `${html}`)
 
       }
-    })
+    }
+    renderRides(purpleArray)
 
 
 
