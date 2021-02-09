@@ -70,21 +70,20 @@ function renderRides(ridesArray) {
 window.addEventListener('DOMContentLoaded', function() {
   // YOUR CODE
 
+//AllRides
+
+let url = 'https://kiei451.com/api/rides.json' 
+
+let AllRidesButton = document.querySelector('#all-filter')
+ AllRidesButton.addEventListener('click', async function(event){
+ event.preventDefault()
+  console.log("All Rides Selected")
+
+  let response = await fetch (url)
+  let json = await response.json()
+  let rides = json
   
-
-//let AllRides
-
- // let AllRidesButton = document.querySelector('#all-filter')
- // AllRidesButton.addEventListener('click', async function(event){
- // event.preventDefault()
- // AllRidesButton.insertAdjacentHTML('beforeend', `<h1>All Rides Selected</h1>`)
-
- // let response = await fetch (url)
- // let json = await response.json()
- // AllRidesButton.insertAdjacentElement('beforeend', renderRides(ridesArray))
-
-
-
+  AllRidesButton.insertAdjacentElement('beforeend', renderRides(json))
   })
 
 
@@ -93,36 +92,76 @@ window.addEventListener('DOMContentLoaded', function() {
 let NooberPurpleButton = document.querySelector('#noober-purple-filter')
   NooberPurpleButton.addEventListener('click', async function(event){
     event.preventDefault()
-    NooberPurpleButton.insertAdjacentHTML('beforeend', `<h1>Noober Purple Selected</h1>`)
     console.log("Noober Purple Selected")
 
-    let url = 'https://kiei451.com/api/rides.json' 
     let response= await fetch(url)
     let json = await response.json()
-    console.log(json)
-    
+
     let purpleArray = []
     for (let i=0; i<json.length; i++){
       let b = levelOfService(json[i])
       if(b=="Noober Purple"){
         purpleArray.push(json[i])
-    
-  //  let ridesDiv = document.querySelector('.rides')
-  //  let html = renderRides(purpleArray)
-  //  ridesDiv.insertAdjacentHTML('beforeend', `${html}`)
-
-      }
-    }
+      }}
     renderRides(purpleArray)
-
-
-
   })
 
+  // Noober Pool
 
+  let NooberPoolButton = document.querySelector('#noober-pool-filter')
+  NooberPoolButton.addEventListener('click', async function(event){
+    event.preventDefault()
+    console.log("Noober Pool Selected")
 
+    let response= await fetch(url)
+    let json = await response.json()
 
+    let poolArray = []
+    for (let i=0; i<json.length; i++){
+      let b = levelOfService(json[i])
+      if(b=="Noober Pool"){
+        poolArray.push(json[i])
+      }}
+    renderRides(poolArray)
+  })
 
+  // Noober XL
+
+  let NooberXLButton = document.querySelector('#noober-xl-filter')
+  NooberXLButton.addEventListener('click', async function(event){
+    event.preventDefault()
+    console.log("Noober XL Selected")
+
+    let response= await fetch(url)
+    let json = await response.json()
+
+    let xlArray = []
+    for (let i=0; i<json.length; i++){
+      let b = levelOfService(json[i])
+      if(b=="Noober XL"){
+        xlArray.push(json[i])
+      }}
+    renderRides(xlArray)
+  })
+  
+// NooberX
+  let NooberXButton = document.querySelector('#noober-x-filter')
+  NooberXButton.addEventListener('click', async function(event){
+    event.preventDefault()
+    console.log("Noober X Selected")
+
+    let response= await fetch(url)
+    let json = await response.json()
+
+    let xArray = []
+    for (let i=0; i<json.length; i++){
+      let b = levelOfService(json[i])
+      if(b=="Noober X"){
+        xArray.push(json[i])
+      }}
+    renderRides(xArray)
+  })
+  
 
 
 
